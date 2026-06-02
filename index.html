@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>File Access</title>
+</head>
 <body>
 
-<input id="token" placeholder="Enter access code">
+  <h1>Access File</h1>
 
-<button onclick="go()">
-Access File
-</button>
+  <input id="token" placeholder="Access token">
 
-<script>
-function go() {
-    const token =
+  <button onclick="go()">
+    Open
+  </button>
+
+  <script>
+    function go() {
+      const token =
         document.getElementById("token").value;
 
-    window.location =
-      "https://my-worker.username.workers.dev/file/"
-      + token;
-}
-</script>
+      window.location =
+        "https://YOUR-WORKER.workers.dev/file/" + token;
+    }
+  </script>
 
 </body>
 </html>
